@@ -15,19 +15,19 @@ import java.util.Scanner;
  * @since 2021-01-23
  */
 public class Hangman {
-	int wins;
-	int losses;
+	private int wins;
+	private int losses;
 	int roundWins = 0;
 	int roundLosses = 0;
-	String currentWord;
+	private String currentWord;
 	
-	Dictionary dict = new Dictionary("src/words.txt");
+	private Dictionary dict = new Dictionary("src/words.txt");
 	
 	/**
 	 * This is a default constructor.
 	 */
 	public Hangman() {
-		
+		loadWL(); //Loads the record of wins and losses.
 	}
 	
 	/**
@@ -38,7 +38,7 @@ public class Hangman {
 	 * 
 	 * @return Nothing
 	 */
-	public void loadWL() {
+	private void loadWL() {
 		File f = new File("src/WL.txt");
 		
 		try {
@@ -62,7 +62,7 @@ public class Hangman {
 	 * 
 	 * @return Nothing.
 	 */
-	public void writeWL() {
+	private void writeWL() {
 		FileWriter fw;
 		try {
 			fw = new FileWriter("src/WL.txt");

@@ -14,8 +14,8 @@ import java.io.IOException;
  *
  */
 public class Dictionary {
-	String[] wordList = new String[200];
-	SecureRandom randomNumbers = new SecureRandom();
+	private String[] wordList = new String[200];
+	private SecureRandom randomNumbers = new SecureRandom();
 	
 	/**
 	 * This constructor calls the readFile() method on instantiation.
@@ -31,7 +31,7 @@ public class Dictionary {
 	 * 
 	 * @param fileName The name of the file that contains the word list.
 	 */
-	public void readFile(String fileName) {
+	private void readFile(String fileName) {
 		try {
 			
 		Scanner scan = new Scanner(new File(fileName));

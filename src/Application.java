@@ -21,7 +21,6 @@ public class Application {
 		Hangman hm = new Hangman();
 		Scanner scan = new Scanner(System.in);
 		
-		hm.loadWL(); //Loads the record of wins and losses.
 		
 		/**
 		 * The loop containing the prompt for the user to choose to play.
