@@ -24,7 +24,7 @@ public class Hangman {
 	private Dictionary dict = new Dictionary("src/words.txt");
 	
 	/**
-	 * This is a default constructor.
+	 * This is a no argument constructor.
 	 */
 	public Hangman() {
 		loadWL(); //Loads the record of wins and losses.
